@@ -2,8 +2,12 @@
     <div class="header">
         <!-- 折叠按钮 -->
         <div class="collapse-btn" @click="collapseChage">
-            <i v-if="!sidebar.collapse" class="el-icon-s-fold"></i>
-            <i v-else class="el-icon-s-unfold"></i>
+            <el-icon v-if="!sidebar.collapse">
+                <Fold />
+            </el-icon>
+            <el-icon v-else>
+                <Expand />
+            </el-icon>
         </div>
         <div class="logo">后台管理系统</div>
         <div class="header-right">
@@ -12,7 +16,7 @@
                 <div class="btn-bell">
                     <el-tooltip effect="dark" :content="message?`有${message}条未读消息`:`消息中心`" placement="bottom">
                         <router-link to="/tabs">
-                            <i class="el-icon-bell"></i>
+                            <el-icon><Bell /></el-icon>
                         </router-link>
                     </el-tooltip>
                     <span class="btn-bell-badge" v-if="message"></span>
@@ -25,7 +29,7 @@
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
                         {{username}}
-                        <i class="el-icon-caret-bottom"></i>
+                        <el-icon><CaretBottom /></el-icon>
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>

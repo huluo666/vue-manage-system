@@ -72,7 +72,7 @@
                     <template #header>
                         <div class="clearfix">
                             <span>待办事项</span>
-                            <el-button style="float: right; padding: 3px 0" type="text">添加</el-button>
+                            <el-button style="float: right; padding: 3px 0" link>添加</el-button>
                         </div>
                     </template>
 

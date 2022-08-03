@@ -15,14 +15,20 @@
                 访问地址：
                 <a href="http://element.eleme.io/#/zh-CN/component/upload" target="_blank">Element UI Upload</a>
             </div>
-            <el-upload class="upload-demo" drag action="http://jsonplaceholder.typicode.com/api/posts/" multiple>
-                <i class="el-icon-upload"></i>
+            <el-upload
+            class="upload-demo"
+            drag
+            action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+            multiple
+            >
+                <el-icon class="el-icon--upload"><upload-filled /></el-icon>
                 <div class="el-upload__text">
-                    将文件拖到此处，或
-                    <em>点击上传</em>
+                Drop file here or <em>click to upload</em>
                 </div>
                 <template #tip>
-                    <div class="el-upload__tip">只能上传 jpg/png 文件，且不超过 500kb</div>
+                <div class="el-upload__tip">
+                jpg/png files with a size less than 500kb
+                </div>
                 </template>
             </el-upload>
 
